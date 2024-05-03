@@ -1,27 +1,27 @@
+@use 'variaveis';
 @use 'hero';
+@use 'shows';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-$corDeFundo: #3a3a3a;
-$corTextoPrincipal: #f9f9f9;
-
 body {
-    background-color: $corDeFundo;
+    background-color: variaveis.$corDeFundo;
 }
 
 @mixin text($fonteSize: 16px) {
     font-size: $fonteSize;
     line-height: $fonteSize + 10px;
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 @mixin title($fontSize: 36px) {
     @include text($fontSize);
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 .text--big {
@@ -39,7 +39,7 @@ body {
 
 .link-text {
     @include text(18px);
-    color: $corTextoPrincipal;
+    color: variaveis.$corTextoPrincipal;
     text-decoration: underline;
 }
 
