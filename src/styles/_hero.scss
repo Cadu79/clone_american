@@ -2,10 +2,13 @@
     padding: 5.6vw;
     min-height: 80vh;
     background-image: url(../images/poster.webp);
+    background-size: cover;
+    background-position: center;
     text-align: center;
 
     &__content {
         max-width: 640px;
+        margin: 0 auto;
 
         &__branding {
             max-width: 320px;
@@ -13,7 +16,7 @@
         }
 
         .title--small {
-            margin-bottom: 64px;
+            margin-bottom: 32px;
         }
         
         .btn {
@@ -26,7 +29,7 @@
                 border-radius: 5px;
                 transition: background-color 0.3s;
 
-                .btn:hover {
+                &:hover {
                     background-color: #ff0000;
                   }
               }

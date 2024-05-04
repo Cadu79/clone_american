@@ -1,5 +1,3 @@
-@use 'variaveis';
-
 .faq {
     padding: 5.6vw;
 
@@ -10,19 +8,27 @@
 
     &__questions {
         &__item {
-            background-color: variaveis.$corTextoSecundaria;
+            background-color: #3f3f3f;
             margin-bottom: 16px;
+            list-style: none;
 
             &__question {
-                color: variaveis.$corTextoPrincipal;
+                color: #fff;
                 font-size: 20px;
                 padding: 24px;
-                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 cursor: pointer;
+                position: relative;
+                
 
                 &::after {
-                    content: '-';
+                    content: '\279D';
+                    font-family: Arial, sans-serif;
                     position: absolute;
+                    font-size: 24px;
+                    transition: transform 0.3s;
                     top: 0;
                     right: 24px;
                     height: 100%;
@@ -35,6 +41,20 @@
             &__answer {
                 height: 0;
                 overflow: hidden;
+                padding: 0 24px;
+                transition: height, .5s ease;
+            }
+
+            &--is-open {
+                .faq__questions__item__question::after {
+                    transform: rotate(90deg);
+                }
+
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding-bottom: 24px;
+                    transition: height, .5s ease;
+                }
             }
         }
     }
